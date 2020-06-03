@@ -8,8 +8,7 @@
 
 import UIKit
 import CoreData
-import Fabric
-import Crashlytics
+import Firebase
 import AVFoundation
 
 @UIApplicationMain
@@ -56,13 +55,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
 
-        // Fabric
-        #if DEBUG
-        print("[Running Recast in debug configuration]")
-        #else
-        print("[Running Recast in release configuration]")
-        Crashlytics.start(withAPIKey: Keys.fabricAPIKey.value)
-        #endif
+//        // Fabric
+//        #if DEBUG
+//        print("[Running Recast in debug configuration]")
+//        #else
+//        print("[Running Recast in release configuration]")
+//        Crashlytics.start(withAPIKey: Keys.fabricAPIKey.value)
+//        #endif
+        FirebaseApp.configure()
 
         return true
     }

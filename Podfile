@@ -10,6 +10,8 @@ target 'Recast' do
   pod 'SnapKit', '4.0.1'
   pod 'Draft', :git => 'https://github.com/cuappdev/Draft.git'
   pod 'Kingfisher', '4.10.0' # Swift 4.2
-  pod 'Fabric'
-  pod 'Crashlytics'
+  # add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  # add pods for any other desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
 end
